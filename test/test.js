@@ -5,8 +5,7 @@ var app = require('../app.js');
 describe('GET /', function() {
     it('respond with Hello World', function(done) {
         request(app)
-            .get('/')
-            //.expect('Content-Type', /json/)
+            .get('/api/v1/')
             .expect('Content-Length', '11')
             .expect(200)
             .expect('Hello World', done);
@@ -16,7 +15,7 @@ describe('GET /', function() {
 describe('GET /hello.json', function() {
     it('respond with Hello World JSON', function(done) {
         request(app)
-            .get('/hello.json')
+            .get('/api/v1/hello.json')
             .expect('Content-Type', /json/)
             .expect('Content-Length', '17')
             .expect(200)
@@ -27,7 +26,7 @@ describe('GET /hello.json', function() {
 describe('GET /user/1', function() {
     it('respond with User Detail (Simple)', function(done) {
         request(app)
-            .get('/user/1')
+            .get('/api/v1/user/1')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect('Content-Length', '73')
@@ -45,7 +44,7 @@ describe('GET /user/1', function() {
 describe('GET /user/1', function() {
     it('respond with User Detail (BDD)', function(done) {
         request(app)
-            .get('/user/1')
+            .get('/api/v1/user/1')
             .end(function(err,res) {
                 should.not.exist(err);
                 should.exist(res);
