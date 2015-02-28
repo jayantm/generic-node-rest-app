@@ -14,3 +14,14 @@ $ chmod +x script/test.sh
 ```sh
 $ ./script/test.sh
 ```
+
+## To exec app server in continuous mode
+* Using `forever` to start (Install `forever` as global module)
+```sh
+$ sudo npm install -g forever
+$ forever start app.js
+```
+* Using `forever` to stop
+```sh
+$ forever stopall
+```
