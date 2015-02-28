@@ -10,5 +10,9 @@
         "mocha": "2.1.0",
         "supertest": "0.15.0",
         "should": "5.0.1"
+    },
+    "scripts": {
+        "start": "node app.js",
+        "test": "./node_modules/.bin/mocha ./test/test.js"
     }
 }

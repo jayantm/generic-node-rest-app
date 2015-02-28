@@ -6,6 +6,10 @@ RESTful API service using NodeJS
 ```sh
 $ node app.js
 ```
+OR
+```sh
+$ npm start
+```
 * Add exec permission to test script
 ```sh
 $ chmod +x script/test.sh
@@ -13,6 +17,10 @@ $ chmod +x script/test.sh
 * To run test from root
 ```sh
 $ ./script/test.sh
+```
+OR
+```sh
+$ npm test
 ```
 
 ## To exec app server in continuous mode
